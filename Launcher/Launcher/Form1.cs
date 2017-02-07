@@ -15,5 +15,12 @@ namespace Launcher
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Width = 1500;
+            this.Height = 900;
+            this.Location = new Point(0, 0);
+        }
     }
 }
