@@ -31,10 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.mainWeb = new System.Windows.Forms.WebBrowser();
             this.mainSplitContainer = new System.Windows.Forms.SplitContainer();
-            this.btnCollaps = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnCollaps = new System.Windows.Forms.Button();
+            this.gameList = new System.Windows.Forms.ListView();
             this.mainSplitContainer.Panel1.SuspendLayout();
+            this.mainSplitContainer.Panel2.SuspendLayout();
             this.mainSplitContainer.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,20 +70,21 @@
             // mainSplitContainer.Panel2
             // 
             this.mainSplitContainer.Panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mainSplitContainer.Panel2.BackgroundImage")));
+            this.mainSplitContainer.Panel2.Controls.Add(this.gameList);
             this.mainSplitContainer.Size = new System.Drawing.Size(984, 611);
             this.mainSplitContainer.SplitterDistance = 522;
             this.mainSplitContainer.SplitterWidth = 1;
             this.mainSplitContainer.TabIndex = 1;
             // 
-            // btnCollaps
+            // button2
             // 
-            this.btnCollaps.Location = new System.Drawing.Point(0, 505);
-            this.btnCollaps.Name = "btnCollaps";
-            this.btnCollaps.Size = new System.Drawing.Size(70, 20);
-            this.btnCollaps.TabIndex = 2;
-            this.btnCollaps.Text = "Collapse";
-            this.btnCollaps.UseVisualStyleBackColor = true;
-            this.btnCollaps.Click += new System.EventHandler(this.btnCollaps_Click);
+            this.button2.Location = new System.Drawing.Point(879, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -93,15 +96,25 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // btnCollaps
             // 
-            this.button2.Location = new System.Drawing.Point(879, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnCollaps.Location = new System.Drawing.Point(0, 505);
+            this.btnCollaps.Name = "btnCollaps";
+            this.btnCollaps.Size = new System.Drawing.Size(70, 20);
+            this.btnCollaps.TabIndex = 2;
+            this.btnCollaps.Text = "Collapse";
+            this.btnCollaps.UseVisualStyleBackColor = true;
+            this.btnCollaps.Click += new System.EventHandler(this.btnCollaps_Click);
+            // 
+            // gameList
+            // 
+            this.gameList.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("gameList.BackgroundImage")));
+            this.gameList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gameList.Location = new System.Drawing.Point(0, 0);
+            this.gameList.Name = "gameList";
+            this.gameList.Size = new System.Drawing.Size(984, 88);
+            this.gameList.TabIndex = 0;
+            this.gameList.UseCompatibleStateImageBehavior = false;
             // 
             // frmMain
             // 
@@ -118,6 +131,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Launcher";
             this.mainSplitContainer.Panel1.ResumeLayout(false);
+            this.mainSplitContainer.Panel2.ResumeLayout(false);
             this.mainSplitContainer.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -130,6 +144,7 @@
         private System.Windows.Forms.Button btnCollaps;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ListView gameList;
     }
 }
 
